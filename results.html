@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="css/bootswatch.min.css">
+    
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="http://54.79.105.226/assign1/" class="navbar-brand">Assignment 1 - Zaidon Al-Suhayli</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <form action="results.php">              
+              <input type="hidden" name="session" value="stop"><br>
+              <input type="submit" value="End Session">  
+            </form>
+          </ul>
+          <ul class="nav navbar-nav">
+            <form action="search.php" style="padding-left: 20px;"><br/>
+              <input type="submit" value="Back to Search">
+            </form>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <br/>
+    <br/>
+    
+    <div class="container">
+
+      <!-- Navbar
+      ================================================== -->
+      <div class="bs-docs-section clearfix">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="navbar">Search</h1>
+            </div>
+
+            <div class="bs-component">
+              
+              <!-- $BeginBlock block1 -->
+                ${table}
+              <!-- $EndBlock block1 -->
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/validation.js"></script>
+  </body>
+</html>
+
+

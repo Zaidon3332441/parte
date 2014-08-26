@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="css/bootswatch.min.css">
+        
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="http://54.79.105.226/assign1/" class="navbar-brand">Assignment 1 - Zaidon Al-Suhayli</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li>
+              <form action="search.php">
+                <input type="hidden" name="session" value="start"><br>
+                <input type="submit" value="Start Session">  
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <br/>
+    <br/>
+    
+    <div class="container">
+
+      <!-- Navbar
+      ================================================== -->
+      <div class="bs-docs-section clearfix">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="navbar">Search</h1>
+            </div>
+
+            <div class="bs-component">
+              <form class="form-horizontal" name="frmsearch" action="results.php" onsubmit="return validateForm()" method="get">
+                  <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Wine Name</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" value="e" name="winename" id="txtwinename" placeholder="Wine Name">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label">Winery Name</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" value="e" name="wineryname" id="txtwineryname" placeholder="Winery Name">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label">Region</label>
+                    <div class="col-lg-10">
+                      <select id="cboregion" name="region">
+                        <!-- $BeginBlock block1 -->
+                          ${regions}
+                        <!-- $EndBlock block1 -->
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword" name="grapevariety" class="col-lg-2 control-label">Grape Variety</label>
+                    <div class="col-lg-10">
+                      <select id="cbograpevariety" name="grapevariety">
+                        
+                        <!-- $BeginBlock block2 -->
+                          ${grapevariety}
+                        <!-- $EndBlock block2 -->
+                        
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label"> Min Range of Year</label>
+                    <div class="col-lg-10">
+                      <select id="cbominrangeofyear" name="minrangeofyear">
+                        
+                        <!-- $BeginBlock block3 -->
+                          ${minyear}
+                        <!-- $EndBlock block3 -->
+                        
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label">Max Range of Year</label>
+                    <div class="col-lg-10">
+                      <select id="cbomaxrangeofyear" name="maxrangeofyear">
+                        
+                        <!-- $BeginBlock block4 -->
+                          ${maxyear}
+                        <!-- $EndBlock block4 -->
+                        
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label">Minimum wines in stock</label>
+                    <div class="col-lg-10">
+                      <input type="text" name="minwinestock" value="2" class="form-control" id="txtminwinestock" placeholder="Minimum wine stock">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label">Minimum wines ordered</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" value="3" name="minwineorder" id="txtminwinesordered" placeholder="Minimum wines ordered">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label">Cost Range (Min - Max)</label>
+                    <div class="col-lg-10">
+                      <input type="text" name="mincostrange" value="4" class="form-control" style="float: left;" id="txtmincost" placeholder="Min Cost">
+                      <input type="text" name="maxcostrange" value="5" class="form-control" id="txtmaxcost" placeholder="Max Cost">
+                    </div>
+                  </div>
+                  <div style="display: none;color: red;margin-bottom: 5px;" id="lblerrordescription" role="alert">The data you have entered is incorrect. Try again.</div>
+                  <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                      <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                  </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/validation.js"></script>
+  </body>
+</html>
